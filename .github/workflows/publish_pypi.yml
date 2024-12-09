@@ -1,0 +1,17 @@
+name: Publish to Guardrails Hub
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build & Deploy
+        uses: guardrails-ai/guardrails/.github/actions/validator_pypi_publish@main
+        with:
+          guardrails_token: ${{ secrets.GR_GUARDRAILS_TOKEN }}
+          validator_id: guardrails/guardrails_pii

@@ -1,0 +1,3 @@
+{
+  "exclude": ["validator/analyzer_engine.py"]
+}

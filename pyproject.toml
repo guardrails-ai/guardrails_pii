@@ -1,0 +1,25 @@
+[project]
+name = "guardrails_pii"
+version = "1.0.4"
+description = "Repo for the state-of-the-art Guardrails PII Validator."
+authors = [{ name = "Guardrails AI", email = "contact@guardrailsai.com" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">= 3.8.1"
+dependencies = [
+    "guardrails-ai>=0.4.0",
+    "gliner",
+    "presidio-analyzer",
+    "presidio-anonymizer",
+]
+
+[project.optional-dependencies]
+dev = ["pyright", "pytest", "ruff"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-rP"
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["validator"]
