@@ -104,6 +104,7 @@ Initializes a new instance of the GuardrailsPII class.
 **Parameters**
 - **`entities`** *(List[str])*: A list of entity types to detect and anonymize.
 - **`model_name`** *(str, optional)*: The name of the GLiNER model to use. Defaults to "urchade/gliner_small-v2.1".
+- **`get_entity_threshold`** *(Callable[[str], float], optional)*: A callable to customize the threshold for each entity type Defaults to a function that returns 0.5 for most entities.
 - **`on_fail`** *(Optional[Callable], optional)*: A callable to execute when the validation fails. Defaults to None.
 
 This validator uses Presidio and GLiNER to detect and anonymize PII in the generated text.
