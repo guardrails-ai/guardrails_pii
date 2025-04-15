@@ -1,7 +1,7 @@
 from presidio_anonymizer import AnonymizerEngine
 from presidio_analyzer import RecognizerRegistry
-from .gliner_recognizer import GLiNERRecognizer
-from .analyzer_engine import AnalyzerEngine
+from validator.gliner_recognizer import GLiNERRecognizer
+from validator.analyzer_engine import AnalyzerEngine
 
 
 gliner_recognizer = GLiNERRecognizer(

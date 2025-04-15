@@ -1,6 +1,6 @@
 [project]
 name = "guardrails_pii"
-version = "1.0.5"
+version = "1.0.6"
 description = "Repo for the state-of-the-art Guardrails PII Validator."
 authors = [{ name = "Guardrails AI", email = "contact@guardrailsai.com" }]
 license = { file = "LICENSE" }

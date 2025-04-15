@@ -186,7 +186,7 @@ class GuardrailsPII(Validator):
             "text": model_input.text,
             "entities": model_input.entities,
         }
-        response = self._hub_inference_request(json.dumps(request_body), self.validation_endpoint)
+        response = self._hub_inference_request(json.dumps(request_body), self.validation_endpoint)  # type: ignore
 
         return InferenceOutput.model_validate(response)
 
