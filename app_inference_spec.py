@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel  # noqa: F401
 from typing import List, Optional, cast
 
 from validator.main import GuardrailsPII, InferenceInput as InputRequest, InferenceOutput as OutputResponse
