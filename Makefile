@@ -1,6 +1,6 @@
 dev:
 	pip install -e ".[dev]"
-	python dev-post-install.py
+	python validator/post-install.py
 
 lint:
 	ruff check .
