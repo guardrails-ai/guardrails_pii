@@ -15,5 +15,5 @@ jobs:
           python-version: 3.11
       - name: Run qa
         run: |
-          pip install ".[dev]"
+          make dev
           make qa
