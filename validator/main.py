@@ -1,5 +1,5 @@
 import json
-from typing import Any, Callable, Dict, Optional, List, Tuple, Sequence, cast
+from typing import Any, Callable, Dict, Optional, List, Tuple, Sequence, cast, Union
 
 from guardrails.validator_base import (
     FailResult,
@@ -74,7 +74,7 @@ class GuardrailsPII(Validator):
     }
     def __init__(
         self,
-        entities: str | List[str],
+        entities: Union[str, List[str]],
         model_name: str = "urchade/gliner_small-v2.1",
         get_entity_threshold: Callable = get_entity_threshold,
         on_fail: Optional[Callable] = None,
