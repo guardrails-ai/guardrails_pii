@@ -5,6 +5,7 @@ PRESIDIO_TO_GLINER = {
     "PHONE_NUMBER": [
         "phone number",
     ],
+    "CREDIT_CARD": ["credit card"]
 }
 
 GLINER_TO_PRESIDIO = {}
