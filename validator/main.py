@@ -79,6 +79,7 @@ class GuardrailsPII(Validator):
         get_entity_threshold: Callable = get_entity_threshold,
         on_fail: Optional[Callable] = None,
         use_local: bool = True,
+        use_gpu: bool = True,
         **kwargs,
     ):
         """Validates that the LLM-generated text does not contain Personally Identifiable Information (PII).
@@ -109,6 +110,7 @@ class GuardrailsPII(Validator):
             entities=entities,
             get_entity_threshold=get_entity_threshold,
             use_local=use_local,
+            use_gpu=use_gpu,
             **kwargs,
         )
 
@@ -119,11 +121,13 @@ class GuardrailsPII(Validator):
             self.entities = entities
         self.model_name = model_name
         self.get_entity_threshold = get_entity_threshold
+        self.use_gpu = use_gpu
 
         if self.use_local:
             self.gliner_recognizer = GLiNERRecognizer(
                 supported_entities=self.entities,
                 model_name=model_name,
+                use_gpu=use_gpu,
             )
             registry = RecognizerRegistry()
             registry.load_predefined_recognizers()
